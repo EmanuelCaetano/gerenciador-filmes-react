@@ -1,8 +1,10 @@
 div.topbanner{
   height: 200px;
   background-color: #efefef;
+  padding-left: 10px;
+  padding-top: 10px;
 
-}
+  }
 
 center.topbanner{
   font-size: 50px;
@@ -12,4 +14,18 @@ center.topbanner{
   top: 110px;
   text-align: center;
   width: 99%;
+  } 
+
+img.logo {
+  height: 100px;
+  width: 100px;
+  }
+/*tratamento responsivo "altera qdo muda a resolução" */
+@media(max-width: 1120px){
+
+  img.logo {
+  height: 100px;
+  width: 100px;
+  display: none;
+    }
 }
