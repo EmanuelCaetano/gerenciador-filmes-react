@@ -1,10 +1,11 @@
-
+import { Topbar } from "./componentes/topbar";
+import "./global.css";
 
 function App() {
   return (
-    <div>
-      
-    </div>
+    <>
+    <Topbar/>
+    </>
   );
 }
 
