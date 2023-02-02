@@ -1,9 +1,9 @@
 import "./style.css";
 
-export function Home (){
+export function Actors (){
   return (
     <div className=".content">
-      <h1>Home</h1>
+    <h1>Atores</h1>
       <div>Conteudo</div>
     </div>
 
