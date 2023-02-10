@@ -1,7 +1,7 @@
 import "./style.css";
 import { BACKEND_URL } from "../../config";
 import  axios  from "axios";
-import { useState} from "react";
+import { useState , useEffect} from "react";
 
 function actorsHandler(actors){
 
@@ -14,7 +14,7 @@ function actorsHandler(actors){
 
   var content = actors.map(function(actor){
         return(
-          <div key={i++}> {actor.nome} </div>
+          <div className="actors-content" key={i++}>{i+1} - {actor.nome} </div>
         );
   });
 
@@ -25,9 +25,8 @@ export function Actors (){
 
   const [actors, setActors] = useState("Nada a mostrar");
 
-  
-
-  axios.get(BACKEND_URL + "/atores")
+  useEffect(function(){
+    axios.get(BACKEND_URL + "/atores")
   .then(function(response){
         setActors(actorsHandler(response.data));
   })
@@ -37,6 +36,10 @@ export function Actors (){
   .finally(function(){
 
   });
+
+  },[]);  
+
+  
   
   return (
     <div className=".content">
