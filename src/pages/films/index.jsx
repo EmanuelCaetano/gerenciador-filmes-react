@@ -43,7 +43,7 @@ export function Films (){
   return (
     <div className=".content">
       <h1>Filmes</h1>
-     {films}
+     <div className="cards">{films}</div>
     </div>
 
   );
